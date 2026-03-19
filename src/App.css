@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+/* 2. Nền Wrapper - ĐÃ SỬA CHUẨN MÀU */
+.login-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    /* XÓA lớp phủ màu đen, chỉ giữ lại ảnh gốc */
+    background-image: url('/images/login_bg.jpg'); 
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Ép không cho bất kỳ bộ lọc nào làm nhạt màu ảnh */
+    filter: brightness(100%) contrast(100%); 
+    color: white;
+}
+
+/* 3. Logo và Tiêu đề */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo-circle {
+    width: 105px;
+    height: 105px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+
+.logo-img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+/* 4. Form đăng nhập */
+.login-form {
+    width: 100%;
+    max-width: 360px;
+    padding: 0 10px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 13px 45px 13px 45px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.6); /* Giảm độ đậm viền */
+    background: rgba(255, 255, 255, 0.1); /* Giảm độ đục để thấy màu nền xuyên qua */
+    color: white;
+    font-size: 15px;
+    outline: none;
+    
+    /* GIẢM độ mờ xuống để màu nền bên dưới hiện lên thật hơn */
+    backdrop-filter: blur(4px); 
+    transition: 0.3s;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* 5. FIX ICON */
+.input-icon-left, .input-icon-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff !important;
+    font-size: 17px !important;
+    z-index: 5;
+    opacity: 1 !important;
+    background: none !important;
+}
+
+.input-icon-left {
+    left: 18px;
+}
+
+.input-icon-right {
+    right: 18px;
+    cursor: pointer;
+}
+
+/* 6. Ghi nhớ & Quên mật khẩu */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin: 10px 0 25px;
+    padding: 0 5px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.forgot-pw {
+    color: white;
+    text-decoration: underline; /* Thêm gạch chân cho giống bản gốc của bạn */
+    opacity: 0.9;
+}
+
+/* 7. Nút đăng nhập */
+.submit-btn {
+    width: 100%;
+    padding: 13px;
+    background-color: #f23c4d; /* Màu đỏ tươi Hưng Đạo */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #d93644;
+    transform: scale(1.02); /* Thêm hiệu ứng phóng to nhẹ khi di chuột */
+}
+
+/* 8. Social Icons */
+.social-login {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+}
+
+.google-btn i { color: #DB4437; font-size: 18px; }
+.facebook-btn i { color: #4267B2; font-size: 18px; }
